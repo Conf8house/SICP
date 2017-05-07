@@ -1,0 +1,7 @@
+(define (sqrt x) (* x x))
+
+(define (sum_sqrt a b c)
+  (cond ((and (< (sqrt a) (sqrt b)) (< (sqrt a) (sqrt c))) (+ (sqrt b) (sqrt c)))
+        ((and (< (sqrt b) (sqrt a)) (< (sqrt b) (sqrt c))) (+ (sqrt a) (sqrt c)))
+        ((and (< (sqrt c) (sqrt a)) (< (sqrt c) (sqrt b))) (+ (sqrt a) (sqrt b)))
+        (else "Nothing")))
